@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <title>My third page.</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <script>
+            function getData()
+            {
+                var name 
+                name = document.getElementById("Name").value;
+                if(name == "")
+                {
+                    document.getElementById("Name").style.backgroundColor = "red";
+                    document.getElementById("Name").focus();
+                    window.alert("Name is a required field.");    
+                }
+                else
+                {
+                    document.getElementById("Name").style.backgroundColor = "white";
+                    window.alert("Thanks " + name + ", I look forward to working with you!");
+                }
+
+                var emailaddress 
+                emailaddress = document.getElementById("email").value;
+                if(name == "")
+                {
+                    document.getElementById("email").style.backgroundColor = "red";
+                    document.getElementById("email").focus();
+                    window.alert("Email is a required field.");    
+                }
+                else
+                {
+                    document.getElementById("email").style.backgroundColor = "white";
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <span class="title">Here's how you can contact me.<span>
+        <br />
+        <form action="nextPage.html" type="Post">
+            Name: <input type="text" id="Name"><br>
+            Email Adress: <input type="text" id="email"><br>
+            <h4>Do you agree to hire me?</h4>
+            <select>
+                <option value="apples">Yes</option>
+                <option value="oranges">No</option>
+            </select>
+            <button id="mySubmit" onclick="getData()">Submit</button>
+        </form>
+        <a href="homepage.html" style="text-decoration:none" target="_new">Go back.</a> 
+    </body>
+
+</html>
